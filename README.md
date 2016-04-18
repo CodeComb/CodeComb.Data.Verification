@@ -1,2 +1,2 @@
 # CodeComb.Data.Verification
-An data verification package for ASP.Net Core
+A data verification package for ASP.Net Core
