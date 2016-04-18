@@ -1,9 +1,10 @@
 ﻿{
-  "version": "1.0.0-*",
+  "version": "2.0.0-rc1-final",
   "description": "CodeComb.Data.Verification Class Library",
-  "authors": [ "Yuuko" ],
-  "tags": [ "" ],
-  "projectUrl": "",
+  "authors": [ "AmamiyaYuuko" ],
+  "tags": [ "Data Verification", "vNext" ],
+  "iconUrl": "http://www.1234.sh/images/logo.png",
+  "projectUrl": "https://github.com/CodeComb/CodeComb.Data.Verification",
   "licenseUrl": "",
 
   "dependencies": {
