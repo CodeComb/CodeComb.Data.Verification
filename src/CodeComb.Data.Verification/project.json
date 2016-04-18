@@ -1,0 +1,31 @@
+﻿{
+  "version": "1.0.0-*",
+  "description": "CodeComb.Data.Verification Class Library",
+  "authors": [ "Yuuko" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+
+  "dependencies": {
+    "Newtonsoft.Json": "8.0.2",
+    "EntityFramework.Core": "7.0.0-rc1-final",
+    "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final"
+  },
+
+  "frameworks": {
+    "net451": {
+      "frameworkAssemblies": {
+        "System.Runtime": "4.0.0.0"
+      }
+    },
+    "dotnet5.4": {
+      "dependencies": {
+        "Microsoft.CSharp": "4.0.1-beta-23516",
+        "System.Collections": "4.0.11-beta-23516",
+        "System.Linq": "4.0.1-beta-23516",
+        "System.Runtime": "4.0.21-beta-23516",
+        "System.Threading": "4.0.11-beta-23516"
+      }
+    }
+  }
+}
