@@ -11,7 +11,7 @@ namespace CodeComb.Data.Verification.EntityFramework
     {
         public Guid Id { get; set; }
 
-        public string RuleJson { get; set; }
+        public string RuleJson { get; set; } = "[]";
 
         [NotMapped]
         private ICollection<Verification.Rule> ruleObject;
