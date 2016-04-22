@@ -41,7 +41,7 @@ namespace CodeComb.Data.Verification.Tests
                 new Rule { Type = RuleType.Equal, Expression = str1}
             });
 
-            Assert.Equal(res, dvm.Verify(id, str2));
+            Assert.Equal(res, dvm.Verify(id, str2).IsSuccess);
         }
 
         [Fact]
@@ -53,7 +53,7 @@ namespace CodeComb.Data.Verification.Tests
                 new Rule { Type = RuleType.NotEqual, Expression = "Yuuko"}
             });
 
-            Assert.True(dvm.Verify(id, "Hello"));
+            Assert.True(dvm.Verify(id, "Hello").IsSuccess);
         }
 
         [Theory]
@@ -67,7 +67,7 @@ namespace CodeComb.Data.Verification.Tests
                 new Rule { Type = RuleType.Empty }
             });
 
-            Assert.Equal(res, dvm.Verify(id, str));
+            Assert.Equal(res, dvm.Verify(id, str).IsSuccess);
         }
 
         [Theory]
@@ -81,7 +81,7 @@ namespace CodeComb.Data.Verification.Tests
                 new Rule { Type = RuleType.NotEmpty }
             });
 
-            Assert.Equal(res, dvm.Verify(id, str));
+            Assert.Equal(res, dvm.Verify(id, str).IsSuccess);
         }
 
         [Theory]
@@ -99,7 +99,7 @@ namespace CodeComb.Data.Verification.Tests
                 } }
             });
 
-            Assert.Equal(res, dvm.Verify(id, str));
+            Assert.Equal(res, dvm.Verify(id, str).IsSuccess);
         }
 
         [Theory]
@@ -114,7 +114,7 @@ namespace CodeComb.Data.Verification.Tests
                 new Rule { Type = RuleType.Gte, Expression = "10" }
             });
 
-            Assert.Equal(res, dvm.Verify(id, number.ToString()));
+            Assert.Equal(res, dvm.Verify(id, number.ToString()).IsSuccess);
         }
 
         [Theory]
@@ -129,7 +129,7 @@ namespace CodeComb.Data.Verification.Tests
                 new Rule { Type = RuleType.Gt, Expression = "10" }
             });
 
-            Assert.Equal(res, dvm.Verify(id, number.ToString()));
+            Assert.Equal(res, dvm.Verify(id, number.ToString()).IsSuccess);
         }
 
         [Theory]
@@ -144,7 +144,7 @@ namespace CodeComb.Data.Verification.Tests
                 new Rule { Type = RuleType.Lte, Expression = "10" }
             });
 
-            Assert.Equal(res, dvm.Verify(id, number.ToString()));
+            Assert.Equal(res, dvm.Verify(id, number.ToString()).IsSuccess);
         }
 
         [Theory]
@@ -159,7 +159,7 @@ namespace CodeComb.Data.Verification.Tests
                 new Rule { Type = RuleType.Lt, Expression = "10" }
             });
 
-            Assert.Equal(res, dvm.Verify(id, number.ToString()));
+            Assert.Equal(res, dvm.Verify(id, number.ToString()).IsSuccess);
         }
 
         [Theory]
@@ -173,7 +173,7 @@ namespace CodeComb.Data.Verification.Tests
                 new Rule { Type = RuleType.Regex, Expression = @"^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$" }
             });
 
-            Assert.Equal(res, dvm.Verify(id, str));
+            Assert.Equal(res, dvm.Verify(id, str).IsSuccess);
         }
 
         [Theory]
@@ -221,7 +221,7 @@ namespace CodeComb.Data.Verification.Tests
                 } }
             });
 
-            Assert.Equal(res, dvm.Verify(id, tower, height));
+            Assert.Equal(res, dvm.Verify(id, tower, height).IsSuccess);
         }
     }
 }
