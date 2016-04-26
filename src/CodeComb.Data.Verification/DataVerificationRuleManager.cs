@@ -36,7 +36,6 @@ namespace CodeComb.Data.Verification
                     break;
                 }
             }
-            GC.Collect();
             return verifyInfo;
         }
 
