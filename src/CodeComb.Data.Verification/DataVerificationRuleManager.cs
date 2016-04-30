@@ -82,14 +82,16 @@ namespace CodeComb.Data.Verification
                     return new VerifyResult { IsSuccess = false, Information = information, FailedRules = rules };
                 case RuleType.Not:
                     flag = true;
+                    var not_rules = new List<Rule>();
                     foreach (var x in r.NestedRules)
                     {
                         var result = LiftTest(x, Text);
                         if (result.IsSuccess)
                         {
                             flag = false;
-                            return new VerifyResult { IsSuccess = false, Information = "该字段未能通过非逻辑校验\r\n", FailedRules = new List<Rule> { r } };
+                            not_rules.Add(x);
                         }
+                        return new VerifyResult { IsSuccess = false, Information = "该字段未能通过非逻辑校验\r\n", FailedRules = not_rules };
                     }
                     return new VerifyResult { IsSuccess = true };
                 case RuleType.Empty:
