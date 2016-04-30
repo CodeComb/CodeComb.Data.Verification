@@ -98,7 +98,7 @@ namespace CodeComb.Data.Verification.Tests
                     new Rule { Type = RuleType.Equal, Expression = "Yuuko" }
                 } }
             });
-
+            
             Assert.Equal(res, dvm.Verify(id, str).IsSuccess);
         }
 

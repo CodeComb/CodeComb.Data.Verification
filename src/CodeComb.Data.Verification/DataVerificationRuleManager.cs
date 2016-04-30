@@ -33,7 +33,6 @@ namespace CodeComb.Data.Verification
                     verifyInfo.Information += result.Information;
                     verifyInfo.FailedRules.AddRange(result.FailedRules);
                     verifyInfo.IsSuccess = false;
-                    break;
                 }
             }
             return verifyInfo;
